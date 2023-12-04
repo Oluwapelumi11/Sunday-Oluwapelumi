@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: "nine-five";
+    src: url('assets/fonts/NineByFiveNbp-MypB.ttf');
+}
+
+@font-face {
+    font-family:"high";
+    src: url("assets/fonts/Highland-EaVOe.otf");
+}
+@font-face {
+    font-family:"emo";
+    src: url("assets/fonts/EmotionalBaggage-ZVdXK.ttf");
+}
+@font-face {
+    font-family:"gli";
+    src: url('assets/fonts/Glitchcrafty-lgo4V.ttf');
+}

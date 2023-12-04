@@ -1,0 +1,128 @@
+
+<div>
+    <div class="my-8">
+        <p class="text-white text-4xl" ><span class="text-my-purple">/</span>contact</p>
+        <p class="text-gray-300 text-sm py-4">Want to reach me?</p>
+    </div>
+    <!-- about me paragraph -->
+    <div class="mt-3 py-5 grid grid-cols-7 mb-10 md:gap-x-36 gap-x-6">
+        <!-- first div with text -->
+        <div class="  md:col-span-4 md:items-center flex  col-span-full">
+    <div class="sm:text-sm  text-base px-3  md:px-0 md:pr-2 text-gray-400">
+        <p class="">I'm open to a variety of opportunities, whether it's freelance projects or roles within organizations. If you have any inquiries, job openings, or freelance assignments, please feel free to reach out. I'm eager to explore how we can collaborate.
+    
+          
+    </div>
+    </div>
+    <!-- end of first div with text -->
+    <div class="md:col-span-3 col-span-full  py-8 sm:py-10 md:py-0">
+    <div class="sm:h-fit h-full relative flex justify-center sm:w-full">
+        @if (submitSuccess) {
+            <div class="font-nine" >Message Sent Successfully: You might want to check your mail too</div>
+        }
+        <form action="" class="grid grid-cols-2 gap-4 " [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="col-span-1 relative group text-sm text-gray-400">
+                
+                <input type="text" id="name" formControlName="name" class="bg-transparent peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-7 px-3 py-1 mx-2" name="name" id="name" placeholder="Name">
+                <label for="name" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Name</label>
+            </div>
+            <div class="col-span-1 relative group text-sm text-gray-400">
+                <input type="email" id="email" formControlName="email" class="bg-transparent peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-7 px-3 py-1 mx-2" name="email" id="email" placeholder="Email">
+                <label for="email" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Email</label>
+            </div>
+            <div class="col-span-full relative group text-sm text-gray-400">
+                <input type="text" id="title" formControlName="title" class="bg-transparent peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400  h-7 px-3 py-1 mx-2" name="title" id="title" placeholder="Title">
+                <label for="title" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Title</label>
+            </div>
+            <div class="col-span-full relative group text-sm text-gray-400">
+                <textarea name="" id="message" formControlName="message" placeholder="Message" class="bg-inherit peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-20 px-3 py-1 mx-2"></textarea>
+                <label for="message" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Message</label>
+            </div>
+            <div class="">
+                <input  type="submit" name="submit" id="submit" [disabled]="!contactForm.valid"  class="disabled:border-gray-400 transition-all duration-500 disabled:opacity-70 w-fit border-my-purple px-3 py-1 bg-inherit leading-4 mx-2 border " value="Send">
+            </div>
+        </form>
+    
+    
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="">
+    <p>Don't like forms?</p>
+    
+    </div>
+    
+    
+    <!-- end of about me paragraph -->
+    
+    
+    
+    </div>
+    <!-- end of main cotent div -->
+
+    
+    <!-- End  middle Main Body Div  -->
+    <div class="md:col-span-1 hidden md:flex flex-col">
+        
+        <div class="h-[18rem] block"></div>
+        <div class=" flex justify-end">
+            <div class="block border-gray-400 border-y w-12 border-l h-14 ">
+        </div>
+    
+    
+            <!-- <svg width="63" height="63" class=" " viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="61" r="2" fill="#ABB2BF"/>
+                </svg> -->
+        </div>
+        <div class="h-[15rem] block my-2 w-[0.5px] ml-7"></div>
+        <div class="border-y self-end border-l border-gray-300 h-32 w-14 ">
+        </div>
+        <div class="h-[26rem]  block my-2 w-[0.5px] ml-7"></div>
+        <div class="block self-end w-10 overflow-x-hidden">
+            <svg width="63" height="63" class=" " viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="2" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="16.75" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="31.5" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="46.25" r="2" fill="#ABB2BF"/>
+                <circle cx="2" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="16.75" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="31.5" cy="61" r="2" fill="#ABB2BF"/>
+                <circle cx="46.25" cy="61" r="2" fill="#ABB2BF"/>
+                </svg>
+        </div>
+    
+    
+    </div>
