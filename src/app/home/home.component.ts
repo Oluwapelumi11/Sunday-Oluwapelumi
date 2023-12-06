@@ -1,5 +1,5 @@
-import { Component,ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component,ElementRef,PLATFORM_ID,Inject } from '@angular/core';
+import { CommonModule,isPlatformBrowser } from '@angular/common';
 import Typewriter from 't-writer.js';
 
 
@@ -15,12 +15,14 @@ export class HomeComponent  {
 
 
 
-  constructor( private el: ElementRef ) {}
+  constructor( private el: ElementRef,@Inject(PLATFORM_ID) private platformId: Object ) {}
 
 
 
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
     this.Writer();
+    }
   
   }
 
