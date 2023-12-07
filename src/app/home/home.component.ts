@@ -1,12 +1,14 @@
 import { Component,ElementRef,PLATFORM_ID,Inject } from '@angular/core';
 import { CommonModule,isPlatformBrowser } from '@angular/common';
 import Typewriter from 't-writer.js';
+import { RouterModule, RouterOutlet } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
