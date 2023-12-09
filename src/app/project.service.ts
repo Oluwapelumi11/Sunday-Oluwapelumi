@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectService {
-  url = "http://127.0.0.1:8000/api/projects";
+  url = "https://portfolio-api-peach.vercel.app/api/projects";
 
   constructor( private http: HttpClient) { }
   // async getAllProjects():Promise<Project[]>{

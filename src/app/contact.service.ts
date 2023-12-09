@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  url ="http://127.0.0.1:8000/api/contact/"
+  url ="https://portfolio-api-peach.vercel.app/api/contact/"
   constructor( private http: HttpClient) { }
 
   sendmessage(message:any):Observable<any>{

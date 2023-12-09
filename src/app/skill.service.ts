@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
-  url = 'http://127.0.0.1:8000/api/skills/'
+  url = 'https://portfolio-api-peach.vercel.app/api/skills/'
 
   
   constructor(private http: HttpClient) { }
