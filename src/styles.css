@@ -3,7 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html, body {
+    @apply h-full m-0; /* Set height to 100% and remove margin */
+  }
+  
+  body {
+    @apply bg-my-gray; /* Replace with your desired background color class */
+  }
 
 @font-face {
     font-family: "nine-five";
