@@ -12,7 +12,7 @@ import { Skill } from '../skill';
 <p class="px-1 sm:px-2 border-b">
   {{ skill.category }}</p>
 
-<p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">
+<p class="sm:text-base text-xs text-gray-400 px-2 py-1 leading-6">
   @for (skill of skill.skills; track $index) {
     {{skill}}
   }
