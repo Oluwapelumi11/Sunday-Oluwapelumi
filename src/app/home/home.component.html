@@ -110,7 +110,7 @@
         @defer (on viewport ) {
             @if (projectList) {
                 @for (project of projectList; track $index) {
-                    <app-project></app-project>
+                    <app-project [project]="project"></app-project>
                 }@empty {
                     <p>No featured Projects</p>
                 }

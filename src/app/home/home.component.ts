@@ -17,7 +17,7 @@ import { Project } from '../project';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit,AfterViewInit {
   projectList: Project[] = [];
 
 
@@ -37,9 +37,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
     this.projectService.fetchData();
-  this.projectService.data$.subscribe((result) => {
-    this.projectList = result;
-  })
+    this.projectService.data$.subscribe((result) => {
+      this.projectList = result;
+    })
+  
 
 
 
