@@ -35,7 +35,7 @@ import { RouterModule } from '@angular/router';
             <ul class="flex flex-col text-3xl h-[97vh] md:text-inherit">
                 <li class="py-2 md:py-0 px-2 text-gray-400" ><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="" routerLinkActive="text-white" [routerLinkActiveOptions]="{exact:true}">home</a></li>
                 <li class="py-2 md:py-0 px-2 text-gray-400 active:text-white"><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="fullstack" routerLinkActive="text-white" >Web Projects</a></li>
-                <li class="py-2 md:py-0 px-2 text-gray-400 active:text-white"><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="data-analyst" routerLinkActive="text-white" >Data Science Projects</a></li>
+                <li class="py-2 md:py-0 px-2 text-gray-400 active:text-white"><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="data-science" routerLinkActive="text-white" >Data Science Projects</a></li>
                 <li class="py-2 md:py-0 px-2 text-gray-400 active:text-white"><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="about" routerLinkActive="text-white">about-me</a></li>
                 <li class="py-2 md:py-0 px-2 text-gray-400 active:text-white"><span class="text-my-purple">#</span><a (click)="showNav()" routerLink="contact" routerLinkActive="text-white">contacts</a></li>
                 <div class="py-2 md:py-0 md:px-2 text-left">

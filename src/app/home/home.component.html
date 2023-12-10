@@ -107,63 +107,17 @@
     <!-- featured projects listing -->
     <div class="grid sm:grid-cols-3 sm:gap-3 gap-7 sm:px-0 px-10">
         <!-- project card  -->
-        <div class="h-fit border border-gray-500  text-gray-400 ">
-            <div class=" w-full">
-                <img class="w-full" src="assets/img/faith.png" alt="">
-                <p class="text-left text-sm px-2 py-2">
-                    HTML SCSS Python Flask
-                </p>
-            </div>
-            <div class="border border-gray-400">
-                <p class="py-2 px-2 text-gray-100 font-glitch">ChertNodes</p>
-                <p class="text-sm px-2 ">Minecraft servers hosting</p>
-                <div class="flex py-3 px-2 text-xl font-nine">
-                    <a href="" class=" border  border-my-purple  px-3 py-2 leading-3">Live <~~> </a>
-                    <a href="" class=" border  border-my-purple  mx-3 px-3 py-2 leading-3">Cached <~~> </a>
-                </div>
-            </div>
-
-        </div>
-        <!-- end of project card -->
-
-         <!-- project card  -->
-         <div class="h-fit border border-gray-500 text-gray-400 ">
-            <div class=" w-full">
-                <img class="w-full" src="assets/img/faith.png" alt="">
-                <p class="text-left text-sm px-2 py-2">
-                    HTML SCSS Python Flask
-                </p>
-            </div>
-            <div class="border border-gray-400">
-                <p class="py-2 px-2 text-gray-100 font-glitch">ChertNodes</p>
-                <p class="text-sm px-2 ">Minecraft servers hosting</p>
-                <div class="flex py-3 px-2 text-xl font-nine">
-                    <a href="" class=" border  border-my-purple  px-3 py-2 leading-3">Live <~~> </a>
-                    <a href="" class=" border  border-my-purple  mx-3 px-3 py-2 leading-3">Cached <~~> </a>
-                </div>
-            </div>
-
-        </div>
-        <!-- end of project card -->
-
-         <!-- project card  -->
-         <div class="h-fit border border-gray-500 text-gray-400 ">
-            <div class=" w-full">
-                <img class="w-full" src="assets/img/faith.png" alt="">
-                <p class="text-left text-sm px-2 py-2">
-                    HTML SCSS Python Flask
-                </p>
-            </div>
-            <div class="border border-gray-400">
-                <p class="py-2 px-2 text-gray-100 font-glitch">ChertNodes</p>
-                <p class="text-sm px-2 ">Minecraft servers hosting</p>
-                <div class="flex py-3 px-2 text-xl font-nine">
-                    <a href="" class=" border  border-my-purple  px-3 py-2 leading-3">Live <~~> </a>
-                    <a href="" class=" border  border-my-purple  mx-3 px-3 py-2 leading-3">Cached <~~> </a>
-                </div>
-            </div>
-
-        </div>
+        @defer (on viewport ) {
+            @if (projectList) {
+                @for (project of projectList; track $index) {
+                    <app-project></app-project>
+                }@empty {
+                    <p>No featured Projects</p>
+                }
+            }
+        }@placeholder {
+            <p>My Projects</p>
+        }
         <!-- end of project card -->
     </div>
     <!-- end of featured projects listing -->

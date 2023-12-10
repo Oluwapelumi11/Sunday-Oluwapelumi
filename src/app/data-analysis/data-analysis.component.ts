@@ -16,9 +16,11 @@ projectList : Project[] = []
 constructor(private projectService: ProjectService) {}
 
 ngOnInit() : void {
-  this.projectService.getAllProjects().subscribe((projectList:Project[])=> {
-    this.projectList = projectList;
+  this.projectService.fetchData();
+  this.projectService.data$.subscribe((result) => {
+    this.projectList = result;
   })
+  
 }
 
 

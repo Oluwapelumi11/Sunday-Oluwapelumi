@@ -1,31 +1,51 @@
-import { Component,ElementRef,PLATFORM_ID,Inject } from '@angular/core';
+import { Component,ElementRef,PLATFORM_ID,Inject, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule,isPlatformBrowser } from '@angular/common';
 import Typewriter from 't-writer.js';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { ProjectComponent } from '../project/project.component';
+import { ProjectService } from '../project.service';
+import { SkillService } from '../skill.service';
+import { Project } from '../project';
+
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,RouterModule,RouterOutlet],
+  imports: [CommonModule,RouterModule,RouterOutlet,ProjectComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent  {
-  
+export class HomeComponent implements OnInit, AfterViewInit {
+  projectList: Project[] = [];
 
 
 
-  constructor( private el: ElementRef,@Inject(PLATFORM_ID) private platformId: Object ) {}
+  constructor( private el: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object,
+   private projectService: ProjectService,
+   private skillService: SkillService ) {}
 
+   ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.Writer();
+    }
+  }
 
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-    this.Writer();
-    }
-  
+
+    this.projectService.fetchData();
+  this.projectService.data$.subscribe((result) => {
+    this.projectList = result;
+  })
+
+
+
+
+
+   
   }
 
 
