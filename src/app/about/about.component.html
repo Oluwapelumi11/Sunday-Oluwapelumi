@@ -39,7 +39,7 @@
     
     <div class="md:my-5">
     <p class="pr-3 py-4 sm:py-0 md:text-lg text-xl"><span class="text-my-purple">#</span>skills</p>
-     <div class="grid grid-cols-5 gap-6 md:py-5 py-2">
+     <div class="grid md:grid-cols-5 sm:grid-cols-3  gap-6 md:py-5 py-2">
     @for (skill of skillList; track $index) {
         <app-skill [skill]="skill"></app-skill>
     }
@@ -52,19 +52,19 @@
     <!-- fun facts div -->
     <div class="md:my-5">
         <p class="pr-3 py-4 sm:py-0 md:text-lg text-xl"><span class="text-my-purple">#</span>my-fun-facts</p>
-        <div class="grid grid-cols-8 my-6">
-            <div class="col-span-5 flex flex-col text-gray-400 text-sm ">
+        <div class="grid grid-cols-8  my-6">
+            <div class="md:col-span-5 col-span-full flex flex-col text-gray-400 text-sm ">
                 <div class="flex my-1 ">
-                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit"> I like winter than summer</p>
-                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I often bike with my friends</p>
+                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit"> I love coding more than eating ☺</p>
+                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I derive fun learning than watching a movie</p>
                 </div>
                 <div class="flex my-1">
-                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit"> I like pizza and pasta</p>
-                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I was in Egypt, Poland and Turkey</p>
+                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit"> I like pounded yam and Vegetable Soup😁</p>
+                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I've never travelled out of the country</p>
                 </div>
                 <div class="flex my-1">
-                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit">My favourite movie is <span class="text-gray-200">The Green Mile</span></p>
-                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I am still in school</p>
+                    <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit">My music artist is <span class="text-gray-200"> Passenger ❤</span></p>
+                    <p class="flex-shrink border px-2 py-1 border-gray-400 ml-1  w-fit "> I love learning and doing the rare things</p>
                 </div>
                 <div class="flex my-1">
                     <p class="flex-shrink px-2 py-1 border border-gray-400 mr-1 w-fit">I have three siblings</p>
