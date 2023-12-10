@@ -9,10 +9,9 @@ import { Project } from '../project';
   template: `
    <div class="h-fit border border-b border-gray-500  text-gray-400 ">
                 <div class=" w-full">
-                  <!-- @if (!project.small_project){ -->
+                  @if (!project.small_project){
                 <img class="w-full" [src]="project.image" alt="">
-                  <!-- } -->
-                  {{project.image}}
+                  }
                     <p class="text-left text-sm px-2 py-2">
                   @for (skill of project.skills; track $index) {
                     <span>{{ skill.name }} </span>
