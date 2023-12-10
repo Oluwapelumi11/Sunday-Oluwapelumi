@@ -6,6 +6,7 @@ import { ProjectComponent } from '../project/project.component';
 import { ProjectService } from '../project.service';
 import { SkillService } from '../skill.service';
 import { Project } from '../project';
+import { Skill } from '../skill';
 
 
 
@@ -19,6 +20,7 @@ import { Project } from '../project';
 })
 export class HomeComponent implements OnInit,AfterViewInit {
   projectList: Project[] = [];
+  skillList: Skill[] = []
 
 
 
@@ -40,14 +42,19 @@ export class HomeComponent implements OnInit,AfterViewInit {
     this.projectService.data$.subscribe((result) => {
       this.projectList = result;
     })
-  
+
+    this.skillService.fetchData();
+    this.skillService.data$.subscribe((result)=>{
+      this.skillList = result;
+    })
+}
 
 
 
 
 
    
-  }
+  
 
 
   Writer():void{

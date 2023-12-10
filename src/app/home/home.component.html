@@ -110,7 +110,9 @@
         @defer (on viewport ) {
             @if (projectList) {
                 @for (project of projectList; track $index) {
-                    <app-project [project]="project"></app-project>
+                    @if (project.featured) {
+                        <app-project [project]="project"></app-project>
+                    }
                 }@empty {
                     <p>No featured Projects</p>
                 }
@@ -145,33 +147,81 @@
 
 <!-- 3rd column  -->
 
-<div class="sm:col-span-3 col-span-full mt-14 grid grid-cols-3  gap-4">
-<div class=" h-fit border border-gray-400 w-full">
-    <p class="px-2 border-b">Languages</p>
-    <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">Python TypeScript JavaScript PHP</p>
-</div>
-<div>
-    <div class=" h-fit border border-gray-400 w-full">
-        <p class="px-2 border-b">Databases</p>
-        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">SQLite  PostgreSQL MongoDB MySQL</p>
-    </div>
-    <div class=" h-fit border my-3 border-gray-400 w-full">
-        <p class="px-2 border-b">Other</p>
-        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">HTML CSS TailwindCSS REST-API Git SQLAlchemy Jinja Blade Bash</p>
-    </div>
-</div>
-<div>
-    <div class=" h-fit border border-gray-400 w-full">
-        <p class="px-2 border-b">Tools</p>
-        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6"> Excel PowerBI Tableau Pandas Numpy Matplotlib Plotly Dash </p>
-    </div>
-    <div class=" h-fit border mt-3 border-gray-400 w-full">
-        <p class="px-1 sm:px-2 border-b">Frameworks</p>
-        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">Django Flask Angular React Express.js Laravel </p>
-    </div>
-</div>
+@defer (on viewport() ) {
+
+@if (skillList) {
+
+    <div class="sm:col-span-3 col-span-full mt-14 grid grid-cols-3 gap-4">
+        <div class=" h-fit border border-gray-400 w-full">
+            <p class="px-2 border-b">{{skillList[0].category}}</p>
+    <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6"> 
+    @for( skills of skillList[0].skills; track $index) {
+
+        {{skills}}
+
+    }@empty {
+        no data
+    }
+    </p>
 
 </div>
+<div>
+    <div class=" h-fit border border-gray-400 w-full">
+        <p class="px-2 border-b">{{skillList[1].category}}</p>
+        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">
+            @for( skills of skillList[1].skills; track $index) {
+
+                {{skills}}
+        
+            }@empty {
+                no data
+            }   
+        </p>
+    </div>
+    <div class=" h-fit border my-3 border-gray-400 w-full">
+        <p class="px-2 border-b">{{skillList[2].category}}</p>
+        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">
+            @for( skills of skillList[2].skills; track $index) {
+
+                {{skills}}
+        
+            }@empty {
+                no data
+            }
+        </p>
+    </div>
+</div>
+<div>
+    <div class=" h-fit border border-gray-400 w-full">
+        <p class="px-2 border-b">{{skillList[3].category}}</p>
+        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">
+            @for( skills of skillList[3].skills; track $index) {
+
+                {{skills}}
+        
+            }@empty {
+                no data
+            }
+            </p>
+    </div>
+    <div class=" h-fit border mt-3 border-gray-400 w-full">
+        <p class="px-1 sm:px-2 border-b">{{skillList[4].category}}</p>
+        <p class="sm:text-sm text-xs text-gray-400 px-2 py-1 leading-6">
+            @for( skills of skillList[4].skills; track $index) {
+
+                {{skills}}
+        
+            }@empty {
+                no data
+            }
+        </p>
+    </div>
+</div>
+</div>
+}
+}@placeholder {
+    <P> No skills found </P>
+}
 <!--end of 3rd column  -->
 </div>
 <!-- end of skills div -->

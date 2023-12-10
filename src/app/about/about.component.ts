@@ -18,10 +18,13 @@ skillList: Skill[] = [];
   constructor(private skillService:SkillService ){ } 
 
   ngOnInit (): void{
-    this.skillService.getAllSkill().subscribe((skillList : Skill[]) => {
-      this.skillList =skillList;
+   
+    this.skillService.fetchData();
+    this.skillService.data$.subscribe((result)=>{
+      this.skillList = result;
     })
-
+    
+   
 
 
 

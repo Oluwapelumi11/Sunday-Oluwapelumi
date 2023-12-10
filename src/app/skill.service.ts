@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Skill } from './skill';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, tap } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillService {
-  url = 'https://portfolio-api-oluwapelumi11s-projects.vercel.app/api/skills/'
+ private url = 'https://portfolio-api-oluwapelumi11s-projects.vercel.app/api/skills/'
+ private skilldataSubject = new BehaviorSubject<Skill[]>([]);
 
+ data$: Observable<Skill[]> = this.skilldataSubject.asObservable();
   
   constructor(private http: HttpClient) { }
-  getAllSkill() : Observable<Skill[]> {
-    return this.http.get<Skill[]>(this.url);
-  }
 
+ fetchData(): void {
+  this.http.get<Skill[]>(this.url).pipe(
+    tap((data:Skill[]) => this.skilldataSubject.next(data)),
+    catchError((error) => {
+      console.log("Error fecthing data", error);
+      throw error;
+    })
+  ).subscribe();
+ } 
+
+ 
 }
