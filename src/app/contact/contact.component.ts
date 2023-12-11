@@ -13,7 +13,7 @@ import { ContactService } from '../contact.service';
 })
 export class ContactComponent {
   submitSuccess : boolean = false;
-
+  buttonValue: string ="Send"
 
   contactForm = new FormGroup({
     name : new FormControl('',[Validators.required,Validators.minLength(3)]),
@@ -26,13 +26,15 @@ export class ContactComponent {
   constructor(private contactService: ContactService){ }
   onSubmit(){
     if (this.contactForm.valid){
+      this.buttonValue = "Sending..."
      const contactForm = this.contactForm.value;
     this.contactService.sendmessage(contactForm).subscribe(response => {
       this.contactForm.reset
       this.submitSuccess= true
+      this.buttonValue = "Send"
       setTimeout(() => {
         this.submitSuccess = false
-      }, 2000)
+      }, 5000)
     })
     }
     
