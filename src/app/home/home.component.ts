@@ -94,23 +94,18 @@ export class HomeComponent implements OnInit,AfterViewInit {
 writer2
   .changeTypeColor('#C778DD')
   .type(" fullstack web developer")
-  .rest(3000)
-  .clear()
-  .rest(500)
-  .type(" data analyst")
   .rest(1000)
   .removeCursor()
   .then(writer3.start.bind(writer3))
 
 writer3
-  .type(" who specializes in             ")
+  .type(" and              ")
   .rest(500)
-  .rest(1000)
   .removeCursor()
   .then(writer4.start.bind(writer4))
 writer4
   .changeTypeColor('#C778DD')
-  .type('  machine learning')
+  .type('  data scientist')
   .rest(1000)
   
 
