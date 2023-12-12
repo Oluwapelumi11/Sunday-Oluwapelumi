@@ -22,7 +22,7 @@
             <div class="col-span-full font-nine text-3xl text-center p-4 h-12 success" ></div>
 
      
-        <form action=""  class="grid grid-cols-2 md:gap-4  gap-y-2 w-full px-1" [formGroup]="contactForm" (ngsubmit)="onSubmit()">
+        <form action=""  class="grid grid-cols-2 md:gap-4  gap-y-2 w-full px-1" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="md:col-span-1 col-span-2 relative group text-sm text-gray-400">
                 
                 <input type="text" id="name" formControlName="name" class="bg-transparent peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-7 px-3 py-1 mx-2" name="name" id="name" placeholder="Name">
@@ -37,7 +37,7 @@
                 <label for="title" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Title</label>
             </div>
             <div class="col-span-full relative group text-sm text-gray-400">
-                <textarea name="" id="message" formControlName="message" placeholder="Message" class="bg-inherit peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-20 px-3 py-1 mx-2"></textarea>
+                <textarea name="message" id="message" formControlName="message" placeholder="Message" class="bg-inherit peer placeholder:text-transparent w-full leading-4 focus:ring-0 focus:outline-none  focus:border-gray-400 h-20 px-3 py-1 mx-2"></textarea>
                 <label for="message" class="absolute text-gray-400 top-0 left-4 peer-focus:-translate-y-3 peer-focus:bg-my-gray text-sm duration-200 ease-linear peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:px-1 peer-focus:text-sm peer-focus:text-gray-300 transform -translate-y-3 peer-placeholder-shown:bg-transparent bg-my-gray peer-placeholder-shown:translate-y-0 leading-tight px-1 ">Message</label>
             </div>
             <div class="">
