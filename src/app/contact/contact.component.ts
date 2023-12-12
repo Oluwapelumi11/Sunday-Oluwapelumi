@@ -39,9 +39,6 @@ export class ContactComponent {
       if (isPlatformBrowser(this.platformId)) {
         this.Writer();
       }
-      setTimeout(() => {
-        this.submitSuccess = false
-      }, 4000)
     })
     }
     
