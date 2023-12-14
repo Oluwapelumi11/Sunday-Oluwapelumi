@@ -107,7 +107,7 @@
     <!-- featured projects listing -->
     <div class="grid sm:grid-cols-3 sm:gap-3 gap-7 sm:px-0 px-10">
         <!-- project card  -->
-        @defer (on viewport ) {
+
             @if (projectList) {
                 @for (project of projectList; track $index) {
                     @if (project.featured) {
@@ -117,9 +117,7 @@
                     <p>No featured Projects</p>
                 }
             }
-        }@placeholder {
-            <p>My Projects</p>
-        }
+
         <!-- end of project card -->
     </div>
     <!-- end of featured projects listing -->
@@ -147,7 +145,6 @@
 
 <!-- 3rd column  -->
 
-@defer (on viewport() ) {
 
 @if (skillList) {
 
@@ -219,9 +216,7 @@
 </div>
 </div>
 }
-}@placeholder {
-    <P> No skills found </P>
-}
+
 <!--end of 3rd column  -->
 </div>
 <!-- end of skills div -->
