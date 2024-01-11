@@ -33,7 +33,7 @@ export class ContactComponent {
       this.buttonValue = "Sending..."
      const contactForm = this.contactForm.value;
     this.contactService.sendmessage(contactForm).subscribe(response => {
-      this.contactForm.reset
+      this.contactForm.reset()
       this.submitSuccess= true
       this.buttonValue = "Send"
       if (isPlatformBrowser(this.platformId)) {
