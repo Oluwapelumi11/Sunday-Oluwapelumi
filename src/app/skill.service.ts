@@ -18,11 +18,8 @@ export class SkillService {
  fetchData(): void {
   this.http.get<Skill[]>(this.url).pipe(
     tap((data:Skill[]) => this.skilldataSubject.next(data)),
-    catchError((error) => {
-      console.log("Error fecthing data", error);
-      throw error;
-    })
-  ).subscribe();
+    
+  )
  } 
 
  

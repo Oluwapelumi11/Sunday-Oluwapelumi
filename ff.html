@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Simple Bar Chart</title>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // Your chart data
+    const data = {
+      labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      datasets: [{
+        data: [30, 50, 20, 70, 10, 90, 40], // Sample data (replace with your actual data)
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 0)',
+        borderWidth: 0,
+      }]
+    };
+
+    // Chart options
+    const options = {
+      scales: {
+        x: {
+          display: false, // Hide x-axis labels
+        },
+        y: {
+          display: false, // Hide y-axis labels
+        }
+      },
+      plugins: {
+        legend: {
+          display: false, // Hide legend
+        }
+      }
+    };
+
+    // Create the bar chart
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options,
+    });
+  </script>
+</body>
+</html>

@@ -18,16 +18,14 @@ export class ProjectService {
 
   fetchData(): void {
     this.http.get<Project[]>(this.url).pipe(
-      tap((data: Project[]) => this.projectDataSubject.next(data)),
-      catchError((error) => {
-        console.log("Error fetching data", error);
-        throw error;
-      })
-    ).subscribe();
-  }
+      tap((data: Project[]) => this.projectDataSubject.next(data))
+      ),
+    }
 
 
 
+
+    }
 
 
 
