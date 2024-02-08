@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable, catchError, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
- private url = 'https://portfolio-api-oluwapelumi11s-projects.vercel.app/api/skills/'
+ private url = 'https://portfolio-api-theta-flame.vercel.app/api/skills/'
  private skilldataSubject = new BehaviorSubject<Skill[]>([]);
 
  data$: Observable<Skill[]> = this.skilldataSubject.asObservable();

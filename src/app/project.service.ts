@@ -9,7 +9,7 @@ import {catchError, filter,map, tap, throwIfEmpty, timeout} from 'rxjs/operators
   providedIn: 'root'
 })
 export class ProjectService {
-  private url = "https://portfolio-api-oluwapelumi11s-projects.vercel.app/api/projects";
+  private url = "https://portfolio-api-theta-flame.vercel.app/api/projects";
   private projectDataSubject = new BehaviorSubject<Project[]>([]);
 
   data$: Observable<Project[]> = this.projectDataSubject.asObservable();
