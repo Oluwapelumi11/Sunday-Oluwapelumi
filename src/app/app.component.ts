@@ -15,5 +15,7 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 export class AppComponent {
   title = 'Sunday-Oluwapelumi';
 
-  
+  getCurrentYear(): number {
+    return new Date().getFullYear();
+  }
 }
