@@ -1,4 +1,4 @@
-import { Component,ElementRef,PLATFORM_ID,Inject, OnInit, AfterViewInit,OnDestroy } from '@angular/core';
+import { Component,ElementRef,PLATFORM_ID,Inject, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule,isPlatformBrowser } from '@angular/common';
 import Typewriter from 't-writer.js';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -18,7 +18,7 @@ import { Skill } from '../skill';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit,AfterViewInit,OnDestroy {
+export class HomeComponent implements OnInit,AfterViewInit {
   projectList: Project[] = [];
   skillList: Skill[] = []
 
@@ -47,11 +47,6 @@ export class HomeComponent implements OnInit,AfterViewInit,OnDestroy {
     this.skillService.data$.subscribe((result)=>{
       this.skillList = result;
     })
-
-    ngOnDestroy(){
-      this.projectService.data$.unsuscribe()
-      this.skillService.data$.unsuscribe()
-    }
 }
 
 
