@@ -1,4 +1,4 @@
-import { Component,ElementRef,PLATFORM_ID,Inject, OnInit, AfterViewInit } from '@angular/core';
+import { Component,ElementRef,PLATFORM_ID,Inject, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule,isPlatformBrowser } from '@angular/common';
 import Typewriter from 't-writer.js';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -7,6 +7,7 @@ import { ProjectService } from '../project.service';
 import { SkillService } from '../skill.service';
 import { Project } from '../project';
 import { Skill } from '../skill';
+import { Subscription } from 'rxjs';
 
 
 
@@ -18,11 +19,12 @@ import { Skill } from '../skill';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit,AfterViewInit {
+export class HomeComponent implements OnInit,AfterViewInit,OnDestroy {
   projectList: Project[] = [];
   skillList: Skill[] = []
 
-
+  projectsubscription! : Subscription
+  skillsubscription! : Subscription
 
   constructor( private el: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -39,14 +41,22 @@ export class HomeComponent implements OnInit,AfterViewInit {
   ngOnInit(): void {
 
     this.projectService.fetchData();
-    this.projectService.data$.subscribe((result) => {
+    this.projectsubscription =this.projectService.data$.subscribe((result) => {
       this.projectList = result;
     })
 
     this.skillService.fetchData();
-    this.skillService.data$.subscribe((result)=>{
+    this.skillsubscription =this.skillService.data$.subscribe((result)=>{
       this.skillList = result;
     })
+}
+ngOnDestroy(): void {
+  if (this.projectsubscription){
+    this.projectsubscription.unsubscribe();
+  }
+  if (this.skillsubscription){
+    this.skillsubscription.unsubscribe();
+  }
 }
 
 
