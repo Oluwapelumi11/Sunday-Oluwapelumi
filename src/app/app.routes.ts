@@ -10,23 +10,23 @@ export const routes: Routes = [
     {
         path: "",
         component: HomeComponent,
-        title: "Home | Oluwapelumi"
+        title: "Sunday Oluwapelumi's Portfolio"
     },{
         path: "fullstack",
         component: WorksComponent,
-        title: "Web Projects | Oluwapelumi",
+        title: "Sunday Oluwapelumi's Projects",
     },{
         path : "contact",
         component: ContactComponent,
-        title: "Contact | Oluwapelumi"
+        title: "Contact Sunday Oluwapelumi"
     },{
         path: "about",
         component: AboutComponent,
-        title: "About | Oluwapelumi"
+        title: "About Sunday Oluwapelumi"
     },{
         path: "data-science",
         component: DataAnalysisComponent,
-        title: "Data Analysis Projects | Oluwapelumi"
+        title: "Data Analysis Projects"
     }
 ];
 // import { Routes } from '@angular/router';
